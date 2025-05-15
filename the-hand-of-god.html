@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Hand of God | ProjectLS</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+       <a href="index.html"><img src="assets/img/ProjectLS logo.PNG" alt="ProjectLS Logo"></a>
+      </div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="login.html">Login</a>
+        <a href="#">Reviews</a>
+        <a href="cart.html" class=""><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="product-page">
+    <div class="product-container">
+      <div class="product-image">
+        <img src="assets/img/The Hand of God.JPG" alt="The Hand of God by Logicsketch">
+      </div>
+
+      <div class="product-info">
+        <h1>The Hand of God</h1>
+        <p class="by-artist">By <a href="logicsketch.html">Logicsketch</a></p>
+
+        <div class="price">
+          <span class="discounted">₦36,000</span>
+          <span class="original">₦59,000</span>
+        </div>
+
+        <div class="frame-selection">
+          <p><strong>Frame Selection:</strong></p>
+          <label><input type="radio" name="frame" checked> Art Print</label><br>
+          <label><input type="radio" name="frame"> Framed Art Print</label><br>
+          <label><input type="radio" name="frame"> Recessed Framed Print</label>
+        </div>
+
+        <div class="size-selection">
+          <p><strong>Size:</strong></p>
+          <div class="size-buttons">
+            <button class="size-btn selected">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+          </div>
+        </div>
+        
+        <div class="quantity">
+          <label for="qty">Quantity:</label>
+          <input type="number" id="qty" value="1" min="1">
+        </div>
+
+        <button class="add-to-cart" id="addToCartBtn">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

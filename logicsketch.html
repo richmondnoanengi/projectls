@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logicsketch - Artist Page</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+       <a href="index.html"><img src="assets/img/ProjectLS logo.PNG" alt="ProjectLS Logo"></a>
+      </div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="login.html">Login</a>
+        <a href="#">Reviews</a>
+        <a href="cart.html" class="carticon"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="artist-page">
+    <aside class="artist-sidebar">
+      <img src="assets/img/Logicsketch profile pic.PNG" alt="Logicsketch Profile" />
+      <div class="artist-name">Logicsketch</div>
+      <button class="commission-btn">Commission Request</button>
+      <div class="about-artist">
+        <h3>About Artist</h3>
+        <p>Hey! I'm Logicsketch aka Awazi.<br />
+          I am an illustrator, that's well versed in both traditional and digital art.</p>
+      </div>
+    </aside>
+
+    <section class="artist-gallery">
+      <a href="the-hand-of-god.html" class="art-card">
+        <img class="art-image" src="assets/img/The Hand of God.JPG" alt="The Hand of God" />
+        <div class="art-title">The Hand of God</div>
+        <div class="art-artist">Logicsketch</div>
+        <div class="art-price">₦36,000</div>
+      </a>
+      <a href="symbiote-spider-man.html" class="art-card">
+        <img class="art-image" src="assets/img/Symbiote Spider-Man.JPG" alt="Symbiote Spider-Man" />
+        <div class="art-title">Symbiote Spider-Man</div>
+        <div class="art-artist">Logicsketch</div>
+        <div class="art-price">₦25,000</div>
+      </a>
+      <a href="chronicles.html" class="art-card">
+        <img class="art-image" src="assets/img/CHRONICLES_ Pitch.JPG" alt="CHRONICLES: Pitch" />
+        <div class="art-title">CHRONICLES: Pitch</div>
+        <div class="art-artist">Logicsketch</div>
+        <div class="art-price">₦78,000</div>
+      </a>
+      <a href="sunglow.html" class="art-card">
+        <img class="art-image" src="assets/img/Sun glow.JPG" alt="Sun Glow" />
+        <div class="art-title">Sun Glow</div>
+        <div class="art-artist">Logicsketch</div>
+        <div class="art-price">₦150,000</div>
+      </a>
+    </section>
+  </main>
+
+  <!-- Commission Request Modal -->
+  <div class="commission-modal" id="commissionModal">
+    <div class="commission-modal-content">
+      <button class="close-commission" id="closeModal" aria-label="Close">&times;</button>
+      <h3>Commission Request</h3>
+      <form id="commissionForm" action="#" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
