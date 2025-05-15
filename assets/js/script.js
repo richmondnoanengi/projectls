@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const quantity = parseInt(document.getElementById("qty").value);
       const priceText = document.querySelector(".price .discounted").innerText;
       const price = parseInt(priceText.replace(/[^\d]/g, ""));
+      const imageUrl = document.querySelector(".product-image img").src;  // Get product image URL
 
       const cartItem = {
         title,
@@ -86,7 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
         size,
         quantity,
         price,
-        total: price * quantity
+        total: price * quantity,
+        imageUrl  // Store image URL
       };
 
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -105,12 +107,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cart.length === 0) {
       cartItemsDiv.innerHTML = "<p>Your cart is empty.</p>";
+      cartSummaryDiv.innerHTML = "";
     } else {
       let totalAmount = 0;
       cartItemsDiv.innerHTML = cart.map((item, index) => {
         totalAmount += item.total;
         return `
           <div class="cart-item">
+            <img src="${item.imageUrl}" alt="${item.title}" class="cart-item-image" />
             <h2>${item.title}</h2>
             <p><strong>Artist:</strong> ${item.artist}</p>
             <p><strong>Frame:</strong> ${item.frame}</p>
