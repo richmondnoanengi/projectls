@@ -859,3 +859,15 @@ select {
   background-color: white;
   color: #000;
 }
+
+.cart-item-image {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 15px;
+  float: left;
+}
+.cart-item {
+  overflow: auto;
+  padding: 10px 0;
+}
